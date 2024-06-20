@@ -1,0 +1,18 @@
+*{
+    margin:px;
+    padding: 0;
+    box-sizing: border-box;
+}
+table{
+    margin: 10px;
+    width: 100%;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin: 20px;
+}
+td:hover{
+    background-color: #ddd;
+}
