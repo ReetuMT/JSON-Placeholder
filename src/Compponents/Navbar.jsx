@@ -1,7 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import { Link } from 'react-router-dom';
 function Navbar() {
+    const changeBackgroud = ()=>{
+        <style>
+            background:red
+        </style>
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -11,16 +16,16 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#"></a>
+                                <Link className="nav-link active" aria-current="page" to="/" onClick={changeBackgroud}></Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Comments</a>
+                                <Link className="nav-link active" aria-current="page" to="/comments" onClick={changeBackgroud}>Comments</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Photos</a>
+                                <Link className="nav-link active" aria-current="page" to="/photos" onClick={changeBackgroud}>Photos</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Users</a>
+                                <Link className="nav-link active" aria-current="page" to="/users" onClick={changeBackgroud}>Users</Link>
                             </li> 
                         </ul>
                     </div>
