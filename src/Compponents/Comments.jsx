@@ -16,12 +16,14 @@ export default function Comments() {
             console.error('Error fetching comments:', error);
         }
     };
-
+    if (!comments) {
+        return <div className="loader"></div>;
+    }
     return (
         <section>
             {
                 comments.map((data) => (
-                    <div className="card" style={{width: "18rem",display:'grid'}}>
+                    <div className="card" style={{width: "18rem",display:'grid'}} key={data.id}>
                             <div className="card-body">
                                 <h5 className="card-title">{data.name}</h5>
                                 <h6 className='card-email'> {data.email}</h6>
